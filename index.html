@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snackser - Alfajores y Snacks al por mayor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f0;
+    }
+    header {
+      background: #ff9800;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 0.5rem;
+    }
+    nav {
+      background: #ffd180;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.8rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://i.imgur.com/UmnG2px.jpg') center/cover no-repeat;
+      color: white;
+      padding: 5rem 1rem;
+      text-align: center;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .producto {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    footer {
+      background: #ff9800;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.imgur.com/Y9nH3EG.png" alt="Logo Snackser">
+    <h1>Snackser</h1>
+    <p>Distribución mayorista de alfajores y snacks en Córdoba</p>
+  </header>
+
+  <nav>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+    <a href="mailto:info@snackser.com.ar">Email</a>
+  </nav>
+
+  <section class="hero">
+    <h2>¡Los mejores alfajores directo a tu kiosco!</h2>
+    <p>Repartos diarios en Córdoba Capital y alrededores</p>
+  </section>
+
+  <section class="section" id="productos">
+    <h2>Productos destacados</h2>
+    <div class="productos">
+      <div class="producto">
+        <h3>Alfajor Negro</h3>
+        <img src="https://i.imgur.com/EWGLmO3.png" alt="Alfajor" width="100%">
+        <p>Clásico alfajor de dulce de leche, bañado en chocolate negro.</p>
+      </div>
+      <div class="producto">
+        <h3>Alfajor Blanco</h3>
+        <img src="https://i.imgur.com/TzZNH0L.png" alt="Alfajor blanco" width="100%">
+        <p>Versión bañada en chocolate blanco, suave y delicioso.</p>
+      </div>
+      <div class="producto">
+        <h3>Snacks Salados</h3>
+        <img src="https://i.imgur.com/VwReaYy.png" alt="Snacks" width="100%">
+        <p>Papas, maníes y más. ¡Consultanos por combos para tu local!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <h2>Contacto</h2>
+    <p>📞 <strong>+54 351 250-9265</strong></p>
+    <p>📧 <a href="mailto:info@snackser.com.ar">info@snackser.com.ar</a></p>
+    <p>🚚 Distribución a kioscos y almacenes. ¡Contactanos y sumate!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Snackser - Emmanuel y Ricardo Estevez</p>
+  </footer>
+</body>
+</html>
