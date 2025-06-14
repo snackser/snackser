@@ -67,7 +67,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
 
@@ -79,6 +79,10 @@
 
     .section {
       padding: 2rem;
+    }
+
+    #porqueelegirnos {
+      background: #fff3e0;
     }
 
     .productos {
@@ -93,6 +97,68 @@
       padding: 1rem;
       border-radius: 8px;
       text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .producto h3::after {
+      content: attr(data-descripcion);
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .producto:hover h3::after {
+      max-height: 100px;
+    }
+
+    .producto:hover h3 {
+      color: #ff9800;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #formulario-contacto {
+      display: none;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+
+    #formulario-contacto.mostrar {
+      display: flex;
+    }
+
+    form label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    form button,
+    .toggle-form-btn {
+      background-color: #ffa726;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
     footer {
@@ -106,7 +172,7 @@
 </head>
 <body>
 
-  <header data-aos="fade-down">
+  <header>
     <div class="header-container">
       <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/Snackser.png" alt="Logo Snackser" class="logo">
       <div class="header-text">
@@ -116,47 +182,73 @@
     </div>
   </header>
 
-  <nav data-aos="fade-up">
+  <nav>
     <a href="#productos">Productos</a>
     <a href="#contacto">Contacto</a>
     <a href="mailto:info@snackser.com.ar">Email</a>
   </nav>
 
-  <section class="hero" data-aos="zoom-in">
+  <section class="hero">
     <h2>¡Los mejores alfajores / snacks directo a tu Kiosco!</h2>
     <p>Repartos diarios en Córdoba Capital y alrededores</p>
   </section>
 
-  <section class="section" id="productos" data-aos="fade-up">
-    <h2>Productos destacados</h2>
+  <section class="section" id="porqueelegirnos">
+    <h2 data-aos="fade-up">¿Por qué elegirnos?</h2>
     <div class="productos">
-      <div class="producto" data-aos="flip-left">
-        <h3>Alfajor Negro</h3>
-        <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/producto_1.jpg" alt="Alfajor" width="100%">
-        <p>Clásico alfajor de dulce de leche, bañado en chocolate negro.</p>
+      <div class="producto" data-aos="fade-right">
+        <h3 data-descripcion="Repartimos en Córdoba Capital y alrededores todos los días, sin demoras.">🚚 Entregas diarias</h3>
       </div>
-      <div class="producto" data-aos="flip-left" data-aos-delay="100">
-        <h3>Alfajor Blanco</h3>
-        <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/producto_2.jpg" width="100%">
-        <p>Versión bañada en chocolate blanco, suave y delicioso.</p>
+      <div class="producto" data-aos="fade-up">
+        <h3 data-descripcion="Alfajores, snacks dulces y salados. Tenemos todo para tu kiosco o almacén.">🧁 Variedad de productos</h3>
       </div>
-      <div class="producto" data-aos="flip-left" data-aos-delay="200">
-        <h3>Snacks Salados</h3>
-        <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/producto_3.jpg" alt="Snacks" width="100%">
-        <p>Papas, maníes y más. ¡Consultanos por combos para tu local!</p>
+      <div class="producto" data-aos="fade-left">
+        <h3 data-descripcion="Comprá directo al distribuidor, sin intermediarios, al mejor precio.">💰 Precios mayoristas</h3>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contacto" data-aos="fade-up">
+  <section class="section" id="productos">
+    <h2>Productos destacados</h2>
+    <div class="productos">
+      <div class="producto">
+        <h3 data-descripcion="Clásico alfajor de dulce de leche, bañado en chocolate negro.">Alfajor Negro</h3>
+        <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/producto_1.jpg" alt="Alfajor" width="100%">
+      </div>
+      <div class="producto">
+        <h3 data-descripcion="Versión bañada en chocolate blanco, suave y delicioso.">Alfajor Blanco</h3>
+        <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/producto_2.jpg" width="100%">
+      </div>
+      <div class="producto">
+        <h3 data-descripcion="Papas, maníes y más. ¡Consultanos por combos para tu local!">Snacks Salados</h3>
+        <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/producto_3.jpg" alt="Snacks" width="100%">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
     <h2>Contacto</h2>
     <p>📞 <strong>+54 351 250-9265</strong></p>
     <p>📧 <a href="mailto:info@snackser.com.ar">info@snackser.com.ar</a></p>
     <p>🚚 Distribución a kioscos y almacenes. ¡Contactanos y sumate!</p>
     <a href="https://wa.me/5493512509265" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">💬 Contactar por WhatsApp</a>
+    <br><br>
+    <button class="toggle-form-btn" onclick="document.getElementById('formulario-contacto').classList.toggle('mostrar')">✉️ Contactar por web</button>
+    <form id="formulario-contacto" action="mailto:info@snackser.com.ar" method="POST" enctype="text/plain">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
   </section>
 
-  <footer data-aos="fade-up">
+  <footer>
     <p>&copy; 2025 Snackser</p>
   </footer>
 
