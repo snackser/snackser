@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snackser - Alfajores y Snacks al por mayor</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -105,7 +106,7 @@
 </head>
 <body>
 
-  <header>
+  <header data-aos="fade-down">
     <div class="header-container">
       <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/Snackser.png" alt="Logo Snackser" class="logo">
       <div class="header-text">
@@ -115,31 +116,31 @@
     </div>
   </header>
 
-  <nav>
+  <nav data-aos="fade-up">
     <a href="#productos">Productos</a>
     <a href="#contacto">Contacto</a>
     <a href="mailto:info@snackser.com.ar">Email</a>
   </nav>
 
-  <section class="hero">
+  <section class="hero" data-aos="zoom-in">
     <h2>¡Los mejores alfajores / snacks directo a tu Kiosco!</h2>
     <p>Repartos diarios en Córdoba Capital y alrededores</p>
   </section>
 
-  <section class="section" id="productos">
+  <section class="section" id="productos" data-aos="fade-up">
     <h2>Productos destacados</h2>
     <div class="productos">
-      <div class="producto">
+      <div class="producto" data-aos="flip-left">
         <h3>Alfajor Negro</h3>
         <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/producto_1.jpg" alt="Alfajor" width="100%">
         <p>Clásico alfajor de dulce de leche, bañado en chocolate negro.</p>
       </div>
-      <div class="producto">
+      <div class="producto" data-aos="flip-left" data-aos-delay="100">
         <h3>Alfajor Blanco</h3>
         <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/producto_2.jpg" width="100%">
         <p>Versión bañada en chocolate blanco, suave y delicioso.</p>
       </div>
-      <div class="producto">
+      <div class="producto" data-aos="flip-left" data-aos-delay="200">
         <h3>Snacks Salados</h3>
         <img src="https://raw.githubusercontent.com/snackser/snackser/refs/heads/main/producto_3.jpg" alt="Snacks" width="100%">
         <p>Papas, maníes y más. ¡Consultanos por combos para tu local!</p>
@@ -147,7 +148,7 @@
     </div>
   </section>
 
-  <section class="section" id="contacto">
+  <section class="section" id="contacto" data-aos="fade-up">
     <h2>Contacto</h2>
     <p>📞 <strong>+54 351 250-9265</strong></p>
     <p>📧 <a href="mailto:info@snackser.com.ar">info@snackser.com.ar</a></p>
@@ -155,9 +156,14 @@
     <a href="https://wa.me/5493512509265" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">💬 Contactar por WhatsApp</a>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>&copy; 2025 Snackser</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
