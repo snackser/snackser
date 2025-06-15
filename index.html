@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snackser - Alfajores y Snacks al por mayor</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Nunito', sans-serif;
@@ -34,12 +34,14 @@
 
     .header-text h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      font-weight: 700;
     }
 
     .header-text p {
       margin: 0.2rem 0 0;
       font-size: 1rem;
+      font-weight: 400;
     }
 
     nav {
@@ -48,12 +50,13 @@
       justify-content: center;
       gap: 2rem;
       padding: 0.8rem;
+      flex-wrap: wrap;
     }
 
     nav a {
       text-decoration: none;
       color: #333;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     .hero {
@@ -76,6 +79,16 @@
     .hero p {
       position: relative;
       z-index: 2;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      font-weight: 400;
     }
 
     .section {
@@ -139,7 +152,7 @@
 
     form label {
       margin-bottom: 0.5rem;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     form input,
@@ -160,6 +173,7 @@
       font-size: 1rem;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: 600;
     }
 
     footer {
@@ -168,95 +182,129 @@
       padding: 1.2rem;
       text-align: center;
       font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="header-container">
-      <img src="https://raw.githubusercontent.com/snackser/snackser/main/Snackser.png" alt="Logo Snackser" class="logo">
-      <div class="header-text">
-        <h1>Snackser</h1>
-        <p>Distribución mayorista de alfajores y snacks en Córdoba</p>
-      </div>
+<header>
+  <div class="header-container">
+    <img src="https://raw.githubusercontent.com/snackser/snackser/main/Snackser.png" alt="Logo Snackser" class="logo">
+    <div class="header-text">
+      <h1>Snackser</h1>
+      <p>Distribución mayorista de alfajores y snacks en Córdoba</p>
     </div>
-  </header>
+  </div>
+</header>
 
-  <nav>
-    <a href="#productos">Productos</a>
-    <a href="#contacto">Contacto</a>
-    <a href="mailto:info@snackser.com.ar">Email</a>
-  </nav>
+<nav>
+  <a href="#productos">Productos</a>
+  <a href="#contacto">Contacto</a>
+  <a href="mailto:info@snackser.com.ar">Email</a>
+</nav>
 
-  <section class="hero">
-    <h2>¡Los mejores alfajores / snacks directo a tu Kiosco!</h2>
-    <p>Repartos diarios en Córdoba Capital y alrededores</p>
-  </section>
+<section class="hero">
+  <h2>¡Los mejores alfajores / snacks directo a tu Kiosco!</h2>
+  <p>Repartos diarios en Córdoba Capital y alrededores</p>
+</section>
 
-  <section class="section" id="porqueelegirnos">
-    <h2 data-aos="fade-up">¿Por qué elegirnos?</h2>
-    <div class="productos">
-      <div class="producto" data-aos="fade-right">
-        <h3 data-descripcion="Repartimos en Córdoba Capital y alrededores todos los días, sin demoras.">🚚 Entregas diarias</h3>
-      </div>
-      <div class="producto" data-aos="fade-up">
-        <h3 data-descripcion="Alfajores, snacks dulces y salados. Tenemos todo para tu kiosco o almacén.">🧁 Variedad de productos</h3>
-      </div>
-      <div class="producto" data-aos="fade-left">
-        <h3 data-descripcion="Comprá directo al distribuidor, sin intermediarios, al mejor precio.">💰 Precios mayoristas</h3>
-      </div>
+<section class="section" id="porqueelegirnos">
+  <h2 data-aos="fade-up">¿Por qué elegirnos?</h2>
+  <div class="productos">
+    <div class="producto" data-aos="fade-right">
+      <h3 data-descripcion="Repartimos en Córdoba Capital y alrededores todos los días, sin demoras.">🚚 Entregas diarias</h3>
     </div>
-  </section>
-
-  <section class="section" id="productos">
-    <h2>Productos destacados</h2>
-    <div class="productos">
-      <div class="producto">
-        <h3 data-descripcion="Clásico alfajor de dulce de leche, bañado en chocolate negro.">Alfajor Negro</h3>
-        <img src="https://raw.githubusercontent.com/snackser/snackser/main/producto_1.jpg" alt="Alfajor" width="100%">
-      </div>
-      <div class="producto">
-        <h3 data-descripcion="Versión bañada en chocolate blanco, suave y delicioso.">Alfajor Blanco</h3>
-        <img src="https://raw.githubusercontent.com/snackser/snackser/main/producto_2.jpg" width="100%">
-      </div>
-      <div class="producto">
-        <h3 data-descripcion="Papas, maníes y más. ¡Consultanos por combos para tu local!">Snacks Salados</h3>
-        <img src="https://raw.githubusercontent.com/snackser/snackser/main/producto_3.jpg" alt="Snacks" width="100%">
-      </div>
+    <div class="producto" data-aos="fade-up">
+      <h3 data-descripcion="Alfajores, snacks dulces y salados. Tenemos todo para tu kiosco o almacén.">🧁 Variedad de productos</h3>
     </div>
-  </section>
+    <div class="producto" data-aos="fade-left">
+      <h3 data-descripcion="Comprá directo al distribuidor, sin intermediarios, al mejor precio.">💰 Precios mayoristas</h3>
+    </div>
+  </div>
+</section>
 
-  <section class="section" id="contacto">
-    <h2>Contacto</h2>
-    <p>📞 <strong>+54 351 250-9265</strong></p>
-    <p>📧 <a href="mailto:info@snackser.com.ar">info@snackser.com.ar</a></p>
-    <p>🚚 Distribución a kioscos y almacenes. ¡Contactanos y sumate!</p>
-    <a href="https://wa.me/5493512509265" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">💬 Contactar por WhatsApp</a>
-    <br><br>
-    <button class="toggle-form-btn" onclick="document.getElementById('formulario-contacto').classList.toggle('mostrar')">✉️ Contactar por web</button>
-    <form id="formulario-contacto" action="mailto:contacto@snackser.com.ar" method="POST" enctype="text/plain">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="Nombre" required>
+<section class="section" id="productos">
+  <h2>Productos destacados</h2>
+  <div class="productos">
+    <div class="producto">
+      <h3 data-descripcion="Clásico alfajor de dulce de leche, bañado en chocolate negro.">Alfajor Negro</h3>
+      <img src="https://raw.githubusercontent.com/snackser/snackser/main/producto_1.jpg" alt="Alfajor" width="100%">
+    </div>
+    <div class="producto">
+      <h3 data-descripcion="Versión bañada en chocolate blanco, suave y delicioso.">Alfajor Blanco</h3>
+      <img src="https://raw.githubusercontent.com/snackser/snackser/main/producto_2.jpg" width="100%">
+    </div>
+    <div class="producto">
+      <h3 data-descripcion="Papas, maníes y más. ¡Consultanos por combos para tu local!">Snacks Salados</h3>
+      <img src="https://raw.githubusercontent.com/snackser/snackser/main/producto_3.jpg" alt="Snacks" width="100%">
+    </div>
+  </div>
+</section>
 
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="Email" required>
+<section class="section" id="contacto">
+  <h2>Contacto</h2>
+  <p>📞 <strong>+54 351 250-9265</strong></p>
+  <p>📧 <a href="mailto:contacto@snackser.com.ar">contacto@snackser.com.ar</a></p>
+  <p>🚚 Distribución a kioscos y almacenes. ¡Contactanos y sumate!</p>
+  <a href="https://wa.me/5493512509265" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">💬 Contactar por WhatsApp</a>
+  <br><br>
+  <button class="toggle-form-btn" onclick="document.getElementById('formulario-contacto').classList.toggle('mostrar')">✉️ Contactar por web</button>
+  <form id="formulario-contacto" action="mailto:contacto@snackser.com.ar" method="POST" enctype="text/plain">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="Nombre" required>
 
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="Mensaje" rows="5" required></textarea>
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="Email" required>
 
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </section>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="Mensaje" rows="5" required></textarea>
 
-  <footer>
-    <p>&copy; 2025 Snackser</p>
-  </footer>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+<footer>
+  <p>&copy; 2025 Snackser</p>
+</footer>
+
+<a href="https://wa.me/5493512509265" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">💬</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
