@@ -169,10 +169,37 @@
       }
     }
     @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        text-align: center;
-      }
+  .header-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo {
+    max-height: 50px;
+  }
+  .header-text {
+    text-align: left;
+  }
+  .header-text h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .header-text p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
       nav {
         flex-direction: column;
         align-items: center;
